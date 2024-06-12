@@ -1,4 +1,4 @@
-from datetime import datetime
+rom datetime import datetime
 
 
 class User:
@@ -38,9 +38,9 @@ class User:
     @get_post.deleter
     def delete_post(self):
         pass
-user2 = User("Bob", "Bob@email.com", 4567)
-user1 = User("Chris", "chrisr222@gmail.com", 234245436)
+
+user1 = User("Chris", "chrisr222@gmail.com", "234245436","Hello")
 user1.make_post()
 # your User class goes here
-print(f'{user1._log}')
-# your improved User class goes here# your improved User class goes here
+print(f'{user1}  {user1._log}')
+# your improved User class goes here
