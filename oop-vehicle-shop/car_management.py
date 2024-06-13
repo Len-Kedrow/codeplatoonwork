@@ -18,55 +18,59 @@ class CarManager:
         CarManager.total_cars = len(CarManager.all_cars) #calculates class attribute
 
 
-        def __str__(self):
-            return (f" {self._id}, {self._make}, {self._model}, {self._year}, {self._milage}, {self._service}, ")
-
-        def __repr__(self):
-             return (f" {self._id}, {self._make}, {self._model}, {self._year}, {self._milage}, {self._service}, ")
+    def __str__(self):
+            return f"ID: {self._id}, MAKE: {self._make}, MODEL: {self._model}, YEAR: {self._year}, MILES: {self._milage}, SERVICE DUE: {self._service}"
+       
+        # def __repr__(self): 
+        #      return (f"ID: {self._id} MAKE: {self._make} MODEL: {self._model} YEAR: {self._year} MILES: {self._milage} SERVICE DUE: {self._service}")
        
        
-        @property
-        def id(self):
-                return self._id
+    @property
+    def id(self):
+            return self._id
 
-        @id.setter  #Why do I needt this? Will I ever learn? 
-        def set_id(self, new_id):
-            if new_id > CarManager.next_id:
-                self._id = new_id
-            else:
-                print(f" ")
+    @id.setter  #Why do I needt this? Will I ever learn? 
+    def set_id(self, new_id):
+        if new_id > CarManager.next_id:
+            self._id = new_id
+        else:
+            print(f" ")
 
-        @id.deleter
-        def delete_id(self):
-            del self._id
+    @id.deleter
+    def delete_id(self):
+        del self._id
 
-        @property
-        def make(self):
-            return self._make
-        
-        @property
-        def model(self):
-            return self._model
-        @property
-        def year(self):
-            return self._year
-        @property
-        def milage(self):
-            return self._milage
-        @property
-        def service(self):
-            return self._service
-
-    @staticmethod
-    def print_allcars():
-            for obj in CarManager.all_cars:
-                print(obj._make)    
+    @property
+    def make(self):
+        return self._make
+    
+    @property
+    def model(self):
+        return self._model
+    @property
+    def year(self):
+        return self._year
+    @property
+    def milage(self):
+        return self._milage
+    @property
+    def service(self):
+        return self._service
 
 
-car1 = CarManager( "Honda", "Odyssy", 2006, 257755)
-car2 = CarManager( "Audi", "Q5", 2018, 55000)
+#----start replacemet code for above-----
+    
+    @classmethod
+    def print_allcars(cls):
+       for instance in cls.all_cars:
+             print(instance)
+    
+#-----end code that replaces the above
 
-CarManager.print_allcars()		
+
+
+
+
     
 
 
