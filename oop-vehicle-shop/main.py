@@ -2,12 +2,12 @@ from car_management import CarManager
 
 def main():
     
-    car1 = CarManager( "Honda", "Odyssy", 2006, 257755)
-    car2 = CarManager( "Audi", "Q5", 2018, 55000)
     
-    doing_car_stuff = 1
+#inialzin vars
+    doing_car_stuff = True
     choice = None
-    while doing_car_stuff == 1:
+    
+    while doing_car_stuff 
         
         print("""----WELCOME----  \n
             1. Add a car  
@@ -23,19 +23,22 @@ def main():
         match choice:
            
             case 1: 
-                print("Need to be done ")
+                car1 = CarManager( "Honda", "Odyssy", 2006, 257755)
+                print("made car 1 and 2")
+                car2 = CarManager( "Audi", "Q5", 2018, 55000)
             case 2: 
                 CarManager.print_allcars()
             case 3: 
                 print(f"The total number of cars  {CarManager.total_cars}")
             case 4: 
-                input("What is the car ID? ")
+                ID = input("What is the car ID? ")
+                CarManager.checkID() #I need to make this
             case 5: 
                 print("Do Service a car stuff")
             case 6: 
                 print("Do Update milage stuff")
             case 7:
-                doing_car_stuff = 0 
+                doing_car_stuff = False
                 "\n"
             case _:
                 print(f"{choice} has no function")

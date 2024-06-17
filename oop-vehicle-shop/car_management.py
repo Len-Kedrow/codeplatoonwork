@@ -1,12 +1,11 @@
 
-
 class CarManager:
     all_cars = []
     next_id = 1    
     total_cars = 0 
 
     def __init__(self, make, model, year, milage, services=None, id=None):
-        self._id = CarManager.next_id 
+         
         self._make = make
         self._model = model
         self._year = year
@@ -62,8 +61,8 @@ class CarManager:
     
     @classmethod
     def print_allcars(cls):
-       for instance in cls.all_cars:
-             print(instance)
+       for item in cls.all_cars:
+             print(item)
     
 #-----end code that replaces the above
 
