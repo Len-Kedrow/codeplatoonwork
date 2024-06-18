@@ -79,9 +79,6 @@ date with time | TIMESTAMP |
 
 
 Add the missing `CREATE TABLE` statements to the included `create_schema.sql`. You can run this file of SQL commands on your local postgres sever like so:
-
-```
-$ psql school < create_schema.sql
 ```
 
 > `psql` is a command line interface to connect to your Postgres server. The `<` is a shell redirect, passing along the contents of the file `create_schema.sql` to the `psql` program.
