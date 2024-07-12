@@ -19,9 +19,9 @@ DROP TABLE IF EXISTS action_figure;
 
 CREATE TABLE action_figure (
     id INT PRIMARY KEY,
-    action_figure_title VARCHAR,
-    quantity INT,
-    price DECIMAL(5,2)
+    action_figure_title VARCHAR UNIQUE NOT NULL CHECK (action_figure_title ~ '^[A-Za-z0-9 _-]+$'),
+    quantity INT NOT NULL CHECK (quantity>0 AND quantity<31), 
+    price DECIMAL(5,2) NOT NULL CHECK(price >10.00 price<100.01 )
 );
 
 \COPY action_figure FROM './data/action_figure.csv' WITH CSV HEADER;
@@ -29,10 +29,10 @@ CREATE TABLE action_figure (
 DROP TABLE IF EXISTS employee;
 
 CREATE TABLE employee (
-    id INT PRIMARY KEY,
-    employee_name VARCHAR,
-    position VARCHAR,
-    salary DECIMAL(7,2)
+    id INT PRIMARY KEY, 
+    employee_name VARCHAR NOT NULL Check (employee_name ~ '^[A-Za-z ]+$'), 
+    position VARCHAR NOT NULL CHECK (position IN ('Sales Associate', 'Store Manager', 'Inventory Clerk', 'Customer Service Representative', 'IT Specialist, Marketing Coordinator', 'Assistant Manager', 'Finance Analyst', 'Security Officer', 'HR Coordinator'), 
+    salary DECIMAL(7,2) CHECK( salary>16.66 salery<31.25)
 );
 
 \COPY employee FROM './data/employee.csv' WITH CSV HEADER;
