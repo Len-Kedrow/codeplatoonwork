@@ -1,0 +1,17 @@
+                                   List of databases
+      Name      |     Owner      | Encoding | Collate |  Ctype  |   Access privileges   
+----------------+----------------+----------+---------+---------+-----------------------
+ asmnt2_db      | lanier_wexford | UTF8     | C.UTF-8 | C.UTF-8 | 
+ gameing_store  | lanier_wexford | UTF8     | C.UTF-8 | C.UTF-8 | 
+ gamestop       | lanier_wexford | UTF8     | C.UTF-8 | C.UTF-8 | 
+ lanier_wexford | postgres       | UTF8     | C.UTF-8 | C.UTF-8 | 
+ pokedex_db     | lanier_wexford | UTF8     | C.UTF-8 | C.UTF-8 | 
+ postgres       | postgres       | UTF8     | C.UTF-8 | C.UTF-8 | 
+ school         | lanier_wexford | UTF8     | C.UTF-8 | C.UTF-8 | 
+ school_db      | lanier_wexford | UTF8     | C.UTF-8 | C.UTF-8 | 
+ template0      | postgres       | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+                |                |          |         |         | postgres=CTc/postgres
+ template1      | postgres       | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+                |                |          |         |         | postgres=CTc/postgres
+(10 rows)
+
